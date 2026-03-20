@@ -9,10 +9,10 @@
 
 ### Models
 
-- [ ] **MOD-01**: Pet dataclass with name, species (`"dog"` | `"cat"`), age, and preferences dict
-- [ ] **MOD-02**: Owner dataclass with name, available_hours (time budget), and pets list
-- [ ] **MOD-03**: Task dataclass with title, duration_minutes, priority, frequency (times/day), and pet reference
-- [ ] **MOD-04**: Priority uses correct sort ordering (not raw string comparison)
+- [x] **MOD-01**: Pet dataclass with name, species (`"dog"` | `"cat"`), age, and preferences dict
+- [x] **MOD-02**: Owner dataclass with name, available_hours (time budget), and pets list
+- [x] **MOD-03**: Task dataclass with title, duration_minutes, priority, frequency (times/day), and pet reference
+- [x] **MOD-04**: Priority uses correct sort ordering (not raw string comparison)
 
 ### Scheduler
 
@@ -24,7 +24,7 @@
 
 ### Task Library
 
-- [ ] **LIB-01**: Default task library with common care tasks pre-loaded for dogs and cats (no "other" category)
+- [x] **LIB-01**: Default task library with common care tasks pre-loaded for dogs and cats (no "other" category)
 
 ### App Integration
 
@@ -70,11 +70,11 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| MOD-01 | Phase 1 | Pending |
-| MOD-02 | Phase 1 | Pending |
-| MOD-03 | Phase 1 | Pending |
-| MOD-04 | Phase 1 | Pending |
-| LIB-01 | Phase 1 | Pending |
+| MOD-01 | Phase 1 | Complete |
+| MOD-02 | Phase 1 | Complete |
+| MOD-03 | Phase 1 | Complete |
+| MOD-04 | Phase 1 | Complete |
+| LIB-01 | Phase 1 | Complete |
 | DEL-02 | Phase 1 | Pending |
 | SCHED-01 | Phase 2 | Pending |
 | SCHED-02 | Phase 2 | Pending |

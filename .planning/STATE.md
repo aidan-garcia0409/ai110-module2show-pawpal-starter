@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 1 context gathered
-last_updated: "2026-03-20T19:24:34.454Z"
+stopped_at: Completed 01-domain-models-01-PLAN.md
+last_updated: "2026-03-20T19:38:41.017Z"
 last_activity: 2026-03-20 — Roadmap created
 progress:
   total_phases: 4
   completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  total_plans: 2
+  completed_plans: 1
   percent: 0
 ---
 
@@ -50,6 +50,7 @@ Progress: [░░░░░░░░░░] 0%
 - Trend: -
 
 *Updated after each plan completion*
+| Phase 01-domain-models P01 | 8 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -62,6 +63,9 @@ Recent decisions affecting current work:
 - Project init: Priority uses PRIORITY_ORDER sort map (or Priority enum), not raw string comparison
 - Project init: datetime.datetime used internally for time arithmetic; convert to .time() for display only
 - Project init: Task belongs to one Pet (simplifies UML and scheduling output labeling)
+- [Phase 01-domain-models]: PRIORITY_ORDER dict chosen over IntEnum — simpler, no import overhead, enables numeric sort in Phase 2 scheduler
+- [Phase 01-domain-models]: get_default_tasks as module-level function — Phase 2 can import directly without Pet coupling at import time
+- [Phase 01-domain-models]: models.py at project root (not in package) — pytest imports without PYTHONPATH manipulation, no Streamlit dependency
 
 ### Pending Todos
 
@@ -75,6 +79,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-20T19:24:34.445Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-domain-models/01-CONTEXT.md
+Last session: 2026-03-20T19:38:41.014Z
+Stopped at: Completed 01-domain-models-01-PLAN.md
+Resume file: None
