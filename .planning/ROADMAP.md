@@ -44,7 +44,11 @@ Plans:
   3. A task with frequency=2 produces two separate TimeBlocks in the schedule
   4. Tasks that exceed the remaining time budget are excluded from the schedule (not silently dropped without record)
   5. Schedule.explain() returns a readable string listing each scheduled block with start time, end time, and reason
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Write failing pytest test suite for scheduler (TDD red phase)
+- [ ] 02-02-PLAN.md — Add TimeBlock, Schedule, Scheduler to models.py (TDD green phase)
 
 ### Phase 3: App Integration
 **Goal**: The Streamlit app generates and displays a real time-blocked schedule when the user clicks "Generate schedule"
@@ -75,6 +79,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Domain Models | 2/2 | Complete   | 2026-03-20 |
-| 2. Scheduler Algorithm | 0/TBD | Not started | - |
+| 2. Scheduler Algorithm | 0/2 | Not started | - |
 | 3. App Integration | 0/TBD | Not started | - |
 | 4. Submission Deliverables | 0/TBD | Not started | - |
