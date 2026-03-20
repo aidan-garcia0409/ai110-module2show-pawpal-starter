@@ -1,4 +1,5 @@
 import streamlit as st
+from models import Pet, Owner, Task, Scheduler
 
 st.set_page_config(page_title="PawPal+", page_icon="🐾", layout="centered")
 
@@ -41,7 +42,7 @@ st.divider()
 st.subheader("Quick Demo Inputs (UI only)")
 owner_name = st.text_input("Owner name", value="Jordan")
 pet_name = st.text_input("Pet name", value="Mochi")
-species = st.selectbox("Species", ["dog", "cat", "other"])
+species = st.selectbox("Species", ["dog", "cat"])
 
 st.markdown("### Tasks")
 st.caption("Add a few tasks. In your final version, these should feed into your scheduler.")
@@ -73,16 +74,22 @@ st.divider()
 st.subheader("Build Schedule")
 st.caption("This button should call your scheduling logic once you implement it.")
 
+AVAILABLE_HOURS = 8  # default time budget; no UI field in v1 (UX-01 deferred to v2)
+
 if st.button("Generate schedule"):
-    st.warning(
-        "Not implemented yet. Next step: create your scheduling logic (classes/functions) and call it here."
-    )
-    st.markdown(
-        """
-Suggested approach:
-1. Design your UML (draft).
-2. Create class stubs (no logic).
-3. Implement scheduling behavior.
-4. Connect your scheduler here and display results.
-"""
-    )
+    if not st.session_state.tasks:
+        st.warning("Add at least one task before generating a schedule.")
+    else:
+        pet = Pet(name=pet_name, species=species, age=0)
+        owner = Owner(name=owner_name, available_hours=AVAILABLE_HOURS)
+        tasks = [
+            Task(
+                title=t["title"],
+                duration_minutes=t["duration_minutes"],
+                priority=t["priority"],
+                frequency=1,   # UI does not collect frequency; KeyError if read from dict
+                pet=pet,
+            )
+            for t in st.session_state.tasks
+        ]
+        st.session_state.schedule = Scheduler(owner=owner, tasks=tasks).generate_schedule()
