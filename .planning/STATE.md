@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-scheduler-algorithm-01-PLAN.md
-last_updated: "2026-03-20T20:16:06.802Z"
+stopped_at: Completed 02-scheduler-algorithm-02-PLAN.md
+last_updated: "2026-03-20T20:18:28.217Z"
 last_activity: 2026-03-20 — Roadmap created
 progress:
   total_phases: 4
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 4
-  completed_plans: 3
+  completed_plans: 4
   percent: 0
 ---
 
@@ -53,6 +53,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-domain-models P01 | 8 | 2 tasks | 3 files |
 | Phase 01-domain-models P02 | 1 | 1 tasks | 1 files |
 | Phase 02-scheduler-algorithm P01 | 2 | 1 tasks | 1 files |
+| Phase 02-scheduler-algorithm P02 | 5 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -70,6 +71,8 @@ Recent decisions affecting current work:
 - [Phase 01-domain-models]: models.py at project root (not in package) — pytest imports without PYTHONPATH manipulation, no Streamlit dependency
 - [Phase 01-domain-models]: Diagram appended at end of README.md to preserve existing project instructions; *-- composition for Owner-Pet/Pet-Task/Schedule-TimeBlock, --> association for Scheduler relationships
 - [Phase 02-scheduler-algorithm]: Tests copied verbatim from RESEARCH.md test structure — no rewriting to ensure contract exactness
+- [Phase 02-scheduler-algorithm]: Expansion creates local list never mutating self.tasks — immutability at method level
+- [Phase 02-scheduler-algorithm]: Time arithmetic via datetime.datetime.combine() + timedelta then .time() extraction — avoids TypeError with direct time arithmetic
 
 ### Pending Todos
 
@@ -83,6 +86,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-20T20:16:06.799Z
-Stopped at: Completed 02-scheduler-algorithm-01-PLAN.md
+Last session: 2026-03-20T20:18:28.206Z
+Stopped at: Completed 02-scheduler-algorithm-02-PLAN.md
 Resume file: None

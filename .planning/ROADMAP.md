@@ -13,7 +13,7 @@ PawPal is built in four sequential phases that follow the natural dependency cha
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Domain Models** - Define Pet, Owner, Task dataclasses, default task library, and Mermaid UML diagram (completed 2026-03-20)
-- [ ] **Phase 2: Scheduler Algorithm** - Implement Scheduler, Schedule, TimeBlock with correct priority sort, frequency expansion, and time arithmetic
+- [x] **Phase 2: Scheduler Algorithm** - Implement Scheduler, Schedule, TimeBlock with correct priority sort, frequency expansion, and time arithmetic (completed 2026-03-20)
 - [ ] **Phase 3: App Integration** - Wire scheduler backend into Streamlit UI with schedule display, skipped tasks, and edge case feedback
 - [ ] **Phase 4: Submission Deliverables** - Complete reflection.md and finalize README
 
@@ -79,6 +79,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Domain Models | 2/2 | Complete   | 2026-03-20 |
-| 2. Scheduler Algorithm | 1/2 | In Progress|  |
+| 2. Scheduler Algorithm | 2/2 | Complete   | 2026-03-20 |
 | 3. App Integration | 0/TBD | Not started | - |
 | 4. Submission Deliverables | 0/TBD | Not started | - |
