@@ -41,3 +41,50 @@ pip install -r requirements.txt
 5. Add tests to verify key behaviors.
 6. Connect your logic to the Streamlit UI in `app.py`.
 7. Refine UML so it matches what you actually built.
+
+## Class Diagram
+
+The diagram below shows all six domain classes and their relationships.
+
+```mermaid
+classDiagram
+    class Owner {
+        str name
+        int available_hours
+        list~Pet~ pets
+    }
+    class Pet {
+        str name
+        str species
+        int age
+        dict preferences
+    }
+    class Task {
+        str title
+        int duration_minutes
+        str priority
+        int frequency
+        Pet pet
+    }
+    class Scheduler {
+        Owner owner
+        list~Task~ tasks
+        generate_schedule() Schedule
+    }
+    class Schedule {
+        list~TimeBlock~ blocks
+        explain() str
+    }
+    class TimeBlock {
+        Task task
+        time start_time
+        time end_time
+        str reason
+    }
+    Owner "1" *-- "many" Pet : has
+    Pet "1" *-- "many" Task : assigned to
+    Scheduler --> Owner : uses
+    Scheduler --> Schedule : produces
+    Schedule "1" *-- "many" TimeBlock : contains
+    TimeBlock --> Task : references
+```
