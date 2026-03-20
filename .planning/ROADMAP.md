@@ -28,7 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Priority comparison produces the correct order (high before medium before low) — not alphabetical
   3. Default task library returns pre-loaded tasks for "dog" and "cat" species
   4. Mermaid UML class diagram in README renders all six classes and their relationships correctly
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Test scaffold (Wave 0) + models.py dataclasses, PRIORITY_ORDER, and get_default_tasks
+- [ ] 01-02-PLAN.md — Mermaid UML class diagram in README.md
 
 ### Phase 2: Scheduler Algorithm
 **Goal**: Scheduler.generate_schedule() produces a correct, time-bounded Schedule with per-block reasons — validated entirely by pytest before any Streamlit code is touched
@@ -70,7 +74,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Domain Models | 0/TBD | Not started | - |
+| 1. Domain Models | 0/2 | Not started | - |
 | 2. Scheduler Algorithm | 0/TBD | Not started | - |
 | 3. App Integration | 0/TBD | Not started | - |
 | 4. Submission Deliverables | 0/TBD | Not started | - |
