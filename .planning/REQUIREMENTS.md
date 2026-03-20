@@ -16,11 +16,11 @@
 
 ### Scheduler
 
-- [ ] **SCHED-01**: Scheduler takes Owner + task list and produces a Schedule
-- [ ] **SCHED-02**: Tasks sorted by priority (high → medium → low), scheduled greedily if they fit remaining time budget
-- [ ] **SCHED-03**: Tasks with frequency > 1 expanded to multiple TimeBlocks before sorting
-- [ ] **SCHED-04**: TimeBlock has start_time, end_time, and reason string
-- [ ] **SCHED-05**: Schedule.explain() returns human-readable plan summary
+- [x] **SCHED-01**: Scheduler takes Owner + task list and produces a Schedule
+- [x] **SCHED-02**: Tasks sorted by priority (high → medium → low), scheduled greedily if they fit remaining time budget
+- [x] **SCHED-03**: Tasks with frequency > 1 expanded to multiple TimeBlocks before sorting
+- [x] **SCHED-04**: TimeBlock has start_time, end_time, and reason string
+- [x] **SCHED-05**: Schedule.explain() returns human-readable plan summary
 
 ### Task Library
 
@@ -36,7 +36,7 @@
 
 ### Deliverables
 
-- [ ] **DEL-01**: pytest unit tests for models and scheduler (importable without Streamlit)
+- [x] **DEL-01**: pytest unit tests for models and scheduler (importable without Streamlit)
 - [x] **DEL-02**: Mermaid UML class diagram in README
 - [ ] **DEL-03**: reflection.md completed
 
@@ -76,12 +76,12 @@
 | MOD-04 | Phase 1 | Complete |
 | LIB-01 | Phase 1 | Complete |
 | DEL-02 | Phase 1 | Complete |
-| SCHED-01 | Phase 2 | Pending |
-| SCHED-02 | Phase 2 | Pending |
-| SCHED-03 | Phase 2 | Pending |
-| SCHED-04 | Phase 2 | Pending |
-| SCHED-05 | Phase 2 | Pending |
-| DEL-01 | Phase 2 | Pending |
+| SCHED-01 | Phase 2 | Complete |
+| SCHED-02 | Phase 2 | Complete |
+| SCHED-03 | Phase 2 | Complete |
+| SCHED-04 | Phase 2 | Complete |
+| SCHED-05 | Phase 2 | Complete |
+| DEL-01 | Phase 2 | Complete |
 | APP-01 | Phase 3 | Pending |
 | APP-02 | Phase 3 | Pending |
 | APP-03 | Phase 3 | Pending |
