@@ -37,7 +37,7 @@
 ### Deliverables
 
 - [ ] **DEL-01**: pytest unit tests for models and scheduler (importable without Streamlit)
-- [ ] **DEL-02**: Mermaid UML class diagram in README
+- [x] **DEL-02**: Mermaid UML class diagram in README
 - [ ] **DEL-03**: reflection.md completed
 
 ---
@@ -75,7 +75,7 @@
 | MOD-03 | Phase 1 | Complete |
 | MOD-04 | Phase 1 | Complete |
 | LIB-01 | Phase 1 | Complete |
-| DEL-02 | Phase 1 | Pending |
+| DEL-02 | Phase 1 | Complete |
 | SCHED-01 | Phase 2 | Pending |
 | SCHED-02 | Phase 2 | Pending |
 | SCHED-03 | Phase 2 | Pending |

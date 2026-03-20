@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-domain-models-01-PLAN.md
-last_updated: "2026-03-20T19:38:41.017Z"
+stopped_at: Completed 01-domain-models-02-PLAN.md
+last_updated: "2026-03-20T19:40:30.676Z"
 last_activity: 2026-03-20 — Roadmap created
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 2
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -51,6 +51,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-domain-models P01 | 8 | 2 tasks | 3 files |
+| Phase 01-domain-models P02 | 1 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -66,6 +67,7 @@ Recent decisions affecting current work:
 - [Phase 01-domain-models]: PRIORITY_ORDER dict chosen over IntEnum — simpler, no import overhead, enables numeric sort in Phase 2 scheduler
 - [Phase 01-domain-models]: get_default_tasks as module-level function — Phase 2 can import directly without Pet coupling at import time
 - [Phase 01-domain-models]: models.py at project root (not in package) — pytest imports without PYTHONPATH manipulation, no Streamlit dependency
+- [Phase 01-domain-models]: Diagram appended at end of README.md to preserve existing project instructions; *-- composition for Owner-Pet/Pet-Task/Schedule-TimeBlock, --> association for Scheduler relationships
 
 ### Pending Todos
 
@@ -79,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-20T19:38:41.014Z
-Stopped at: Completed 01-domain-models-01-PLAN.md
+Last session: 2026-03-20T19:40:30.674Z
+Stopped at: Completed 01-domain-models-02-PLAN.md
 Resume file: None
