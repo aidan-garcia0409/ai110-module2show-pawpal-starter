@@ -1,4 +1,5 @@
 # models.py — pure Python, importable without Streamlit
+import datetime
 from dataclasses import dataclass, field
 
 # Numeric sort keys — prevents alphabetical priority comparison bug
@@ -62,3 +63,66 @@ def get_default_tasks(pet: Pet) -> list:
         ]
     else:
         raise ValueError(f"No default tasks for species: {pet.species!r}")
+
+
+@dataclass
+class TimeBlock:
+    task: "Task"
+    start_time: datetime.time
+    end_time: datetime.time
+    reason: str
+
+
+@dataclass
+class Schedule:
+    blocks: list = field(default_factory=list)   # list[TimeBlock]
+    skipped: list = field(default_factory=list)  # list[Task]
+
+    def explain(self) -> str:
+        if not self.blocks:
+            return "No tasks scheduled."
+        lines = []
+        for block in self.blocks:
+            start = block.start_time.strftime("%H:%M")
+            end   = block.end_time.strftime("%H:%M")
+            lines.append(
+                f"{start} - {end}: {block.task.title} "
+                f"({block.task.pet.name}) — {block.reason}"
+            )
+        return "\n".join(lines)
+
+
+@dataclass
+class Scheduler:
+    owner: "Owner"
+    tasks: list  # list[Task]
+
+    def generate_schedule(self) -> "Schedule":
+        # Step 1: Expand frequency > 1 tasks into N copies (local list — never mutate self.tasks)
+        expanded = []
+        for task in self.tasks:
+            for _ in range(task.frequency):
+                expanded.append(task)
+
+        # Step 2: Sort by priority — high(0) before medium(1) before low(2)
+        sorted_tasks = sorted(expanded, key=lambda t: PRIORITY_ORDER[t.priority])
+
+        # Step 3: Greedy fit — track remaining minutes and running wall-clock
+        remaining = self.owner.available_hours * 60   # convert hours → minutes
+        current = datetime.datetime.combine(
+            datetime.date.today(), datetime.time(8, 0)
+        )
+        schedule = Schedule()
+
+        for task in sorted_tasks:
+            if task.duration_minutes <= remaining:
+                start = current.time()
+                current += datetime.timedelta(minutes=task.duration_minutes)
+                end = current.time()
+                reason = f"Scheduled: priority={task.priority}"
+                schedule.blocks.append(TimeBlock(task, start, end, reason))
+                remaining -= task.duration_minutes
+            else:
+                schedule.skipped.append(task)
+
+        return schedule
