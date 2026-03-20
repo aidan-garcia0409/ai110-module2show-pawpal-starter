@@ -60,7 +60,10 @@ Plans:
   3. Tasks that did not fit the time budget are shown in a separate "Skipped tasks" section
   4. Submitting with no tasks (or a schedule that produces zero blocks) shows a warning message instead of a blank section
   5. Pet species input is restricted to "dog" and "cat" — "other" is not an available option
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 03-01-PLAN.md — Wire scheduler into app.py: species fix, button handler, schedule render, and manual verification checkpoint
 
 ### Phase 4: Submission Deliverables
 **Goal**: All assignment deliverables are complete and the project is ready to submit
@@ -80,5 +83,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Domain Models | 2/2 | Complete   | 2026-03-20 |
 | 2. Scheduler Algorithm | 2/2 | Complete   | 2026-03-20 |
-| 3. App Integration | 0/TBD | Not started | - |
+| 3. App Integration | 0/1 | Not started | - |
 | 4. Submission Deliverables | 0/TBD | Not started | - |
