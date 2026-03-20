@@ -93,3 +93,26 @@ if st.button("Generate schedule"):
             for t in st.session_state.tasks
         ]
         st.session_state.schedule = Scheduler(owner=owner, tasks=tasks).generate_schedule()
+
+if "schedule" in st.session_state:
+    schedule = st.session_state.schedule
+    if not schedule.blocks:
+        st.warning("No tasks fit the time budget. Try adding shorter or higher-priority tasks.")
+    else:
+        st.subheader("Today's Schedule")
+        st.table([
+            {
+                "Start": b.start_time.strftime("%H:%M"),
+                "Task": b.task.title,
+                "Pet": b.task.pet.name,
+                "Reason": b.reason,
+            }
+            for b in schedule.blocks
+        ])
+
+    if schedule.skipped:
+        st.subheader("Skipped Tasks")
+        st.table([
+            {"Task": t.title, "Duration (min)": t.duration_minutes, "Priority": t.priority}
+            for t in schedule.skipped
+        ])
