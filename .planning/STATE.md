@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-scheduler-algorithm-02-PLAN.md
-last_updated: "2026-03-20T20:20:34.069Z"
+stopped_at: Completed 03-app-integration-03-01-PLAN.md
+last_updated: "2026-03-22T14:59:23.981Z"
 last_activity: 2026-03-20 — Roadmap created
 progress:
   total_phases: 4
-  completed_phases: 2
-  total_plans: 4
-  completed_plans: 4
+  completed_phases: 3
+  total_plans: 5
+  completed_plans: 5
   percent: 0
 ---
 
@@ -54,6 +54,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-domain-models P02 | 1 | 1 tasks | 1 files |
 | Phase 02-scheduler-algorithm P01 | 2 | 1 tasks | 1 files |
 | Phase 02-scheduler-algorithm P02 | 5 | 1 tasks | 1 files |
+| Phase 03-app-integration P01 | 25 | 3 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,9 @@ Recent decisions affecting current work:
 - [Phase 02-scheduler-algorithm]: Tests copied verbatim from RESEARCH.md test structure — no rewriting to ensure contract exactness
 - [Phase 02-scheduler-algorithm]: Expansion creates local list never mutating self.tasks — immutability at method level
 - [Phase 02-scheduler-algorithm]: Time arithmetic via datetime.datetime.combine() + timedelta then .time() extraction — avoids TypeError with direct time arithmetic
+- [Phase 03-app-integration]: AVAILABLE_HOURS=8 hard-coded — no UI field in v1, UX-01 deferred to v2
+- [Phase 03-app-integration]: Module-level render block for st.session_state.schedule — required for Streamlit persistence across widget re-runs
+- [Phase 03-app-integration]: st.table() over st.dataframe() — pandas not in requirements.txt
 
 ### Pending Todos
 
@@ -86,6 +90,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-20T20:18:28.206Z
-Stopped at: Completed 02-scheduler-algorithm-02-PLAN.md
+Last session: 2026-03-22T14:58:12.792Z
+Stopped at: Completed 03-app-integration-03-01-PLAN.md
 Resume file: None

@@ -28,11 +28,11 @@
 
 ### App Integration
 
-- [ ] **APP-01**: "Generate schedule" button wired to real Scheduler backend
-- [ ] **APP-02**: Schedule displayed as time-blocked list (start time, task title, pet name, reason)
-- [ ] **APP-03**: Skipped tasks (didn't fit time budget) shown separately
-- [ ] **APP-04**: Empty schedule shows helpful warning message
-- [ ] **APP-05**: Pet species restricted to "dog" and "cat" only
+- [x] **APP-01**: "Generate schedule" button wired to real Scheduler backend
+- [x] **APP-02**: Schedule displayed as time-blocked list (start time, task title, pet name, reason)
+- [x] **APP-03**: Skipped tasks (didn't fit time budget) shown separately
+- [x] **APP-04**: Empty schedule shows helpful warning message
+- [x] **APP-05**: Pet species restricted to "dog" and "cat" only
 
 ### Deliverables
 
@@ -82,11 +82,11 @@
 | SCHED-04 | Phase 2 | Complete |
 | SCHED-05 | Phase 2 | Complete |
 | DEL-01 | Phase 2 | Complete |
-| APP-01 | Phase 3 | Pending |
-| APP-02 | Phase 3 | Pending |
-| APP-03 | Phase 3 | Pending |
-| APP-04 | Phase 3 | Pending |
-| APP-05 | Phase 3 | Pending |
+| APP-01 | Phase 3 | Complete |
+| APP-02 | Phase 3 | Complete |
+| APP-03 | Phase 3 | Complete |
+| APP-04 | Phase 3 | Complete |
+| APP-05 | Phase 3 | Complete |
 | DEL-03 | Phase 4 | Pending |
 
 **Coverage:**
