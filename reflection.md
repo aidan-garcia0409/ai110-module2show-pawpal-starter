@@ -51,12 +51,15 @@ I evaluated it based on what I thought the app actually needed to be given the s
 **a. What you tested**
 
 - What behaviors did you test?
+I tested that it would know when there wasn't enough room in the schedule. That it wouldn't build a schedule with no tasks. That schedules persisted when you updated some info. That it would list skipped tasks. That it would tell you if a task was simply too long.
 - Why were these tests important?
-
+These were all of the tests that allowed for the schedule to catch basic error cases and make sure that it was able to perform it's general functionality.
 **b. Confidence**
 
 - How confident are you that your scheduler works correctly?
+I feel fairly confident that this is working correctly.
 - What edge cases would you test next if you had more time?
+I would likely spend more time testing out the priority handling to see if it was consistent in building realistic and approproriate schedules.
 
 ---
 
@@ -65,11 +68,13 @@ I evaluated it based on what I thought the app actually needed to be given the s
 **a. What went well**
 
 - What part of this project are you most satisfied with?
+I'm most satisfied with my testing of a new AI tool as well as knowing when to give it some feedback on what I didn't like about it's initial design.
 
 **b. What you would improve**
 
 - If you had another iteration, what would you improve or redesign?
-
+I would likely want to build a UI that is more visually appealing and also build it in a format that would let you save a long term account with pets and schedules that you can always reference on the go.
 **c. Key takeaway**
 
 - What is one important thing you learned about designing systems or working with AI on this project?
+That it's important to look at the suggestions that they make and not just take it as given that what the AI provides is always best.
